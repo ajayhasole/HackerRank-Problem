@@ -1,14 +1,4 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
 class Result {
 
@@ -22,8 +12,15 @@ class Result {
      */
 
     public static int hurdleRace(int k, List<Integer> height) {
-    // Write your code here
-
+        // Find the maximum height of the hurdles
+        int maxHurdleHeight = Collections.max(height);
+        
+        // If the max height is greater than k, return the difference
+        if (maxHurdleHeight > k) {
+            return maxHurdleHeight - k;
+        } else {
+            return 0;
+        }
     }
 
 }
@@ -52,3 +49,4 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+ss
