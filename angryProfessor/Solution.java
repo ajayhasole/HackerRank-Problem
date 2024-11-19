@@ -21,9 +21,14 @@ class Result {
      *  2. INTEGER_ARRAY a
      */
 
-    public static String angryProfessor(int k, List<Integer> a) {
-    // Write your code here
-
+   public static String angryProfessor(int k, List<Integer> a) {
+        long onTimeCount = a.stream().filter(time -> time <= 0).count();
+        
+        if (onTimeCount >= k) {
+            return "NO"; 
+        } else {
+            return "YES"; 
+        }
     }
 
 }
